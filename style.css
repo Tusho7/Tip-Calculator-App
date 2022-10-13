@@ -1,0 +1,382 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #C5E4E7;
+    overflow-x: hidden;
+}
+
+.header-title {
+    width: 24%;
+    margin: 50px auto auto;
+}
+
+/* Second Container */
+
+.main-container {
+    background: #FFFFFF;
+    box-shadow: 0 32px 43px rgba(79, 166, 175, 0.200735);
+    border-radius: 25px 25px 0 0;
+    width: 100%;
+    min-height: auto;
+    margin-top: 50px;
+    padding-bottom: 32px;
+}
+
+.bill-container {
+    display: flex;
+    flex-direction: column;
+
+    width: 83%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 32px;
+}
+
+#people-amount,
+.bill-input {
+    background: #F3F9FA;
+    border-radius: 5px;
+    border: none;
+    height: 48px;
+    margin-top: 6px;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: #00474B;
+    padding: 6px 17px;
+}
+
+.bill-input {
+    background-image: url("./images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-position: top 16px left 15px;
+}
+
+/* Select tip box */
+
+.select-tip-box {
+    width: 82%;
+    display: grid;
+    grid-template-columns: auto;
+    margin: 32px auto 0;
+}
+
+.bill,
+.people-amount,
+.tip {
+    width: 40%;
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D;
+}
+
+.percentages {
+    margin: 16px auto 0;
+    gap: 15px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#tip10,
+#tip15,
+#tip25,
+#tip5,
+#tip50 {
+    width: 147px;
+    height: 48px;
+    background-color: #00474B;
+    border-radius: 5px;
+    border: none;
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#custom-amount {
+    width: 147px;
+    height: 48px;
+    background: #F3F9FA;
+    border-radius: 5px;
+    border: none;
+    padding: 6px 15px;
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: right;
+    color: #547878;
+}
+
+.people-box {
+    display: flex;
+    flex-direction: column;
+    width: 83%;
+    gap: 6px;
+    margin: 32px auto 0;
+}
+
+#people-amount {
+    background-image: url("./images/icon-person.svg");
+    background-repeat: no-repeat;
+    background-position: top 16px left 15px;
+}
+
+/* Total */
+
+.tip-amount-person,
+.total-person {
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: 37px;
+}
+
+.total-box {
+    width: 87%;
+    background-color: #00474B;
+    margin: 32px auto 0;
+    border-radius: 15px;
+    border: none;
+}
+
+.price{
+    width: 35%;
+}
+
+#price-number, #total-price{
+    width: 100%;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+    text-align: center;
+    letter-spacing: -0.666667px;
+    color: #26C2AE;
+    background-color: #00474B;
+    border: none;
+}
+
+.tip-amount-person{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.first-text {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.second-text {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+    color: #7F9D9F;
+}
+
+.total-person {
+    padding: 21px 0 33px;
+}
+
+.button {
+    width: 86%;
+    margin: auto;
+    padding-bottom: 24px;
+}
+
+#reset-button {
+    width: 100%;
+    background: #0D686D;
+    border-radius: 5px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 9px 32px;
+
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #00474B;
+}
+
+/* Hovers */
+
+#custom-amount:hover,
+.bill-input:hover {
+    cursor: pointer;
+    border: 3px solid #26C2AE;
+}
+
+#reset-button:hover,
+#tip10:hover,
+#tip15:hover,
+#tip25:hover,
+#tip50:hover,
+#tip5:hover {
+    cursor: pointer;
+    background-color: #9FE8DF;
+    color: #00474B;
+}
+/* Error Messages */
+
+.error, .bill-error, .too-much{
+    display: none;
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #5E7A7D;
+}
+
+.first-error-message, .second-error-message{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Media Queries */
+
+@media (min-width: 1440px){
+    .header-title{
+        width: 100%;
+        margin-top: 163px;
+    }
+    .header{
+        width: 7%;
+        margin: auto;
+    }
+    .main-container{
+        width: 65%;
+        margin: 87px auto 0px auto;
+        border-radius: 25px;
+    }
+    .container{
+        display: flex;
+        width: 90%;
+        margin: auto;
+        gap: 48px;
+    }
+    .second-container{
+        width: 45%;
+    }
+    .bill-container{
+        padding-top: 48px;
+        margin: 0px;
+        width: 100%;
+    }
+    .select-tip-box{
+        width: 100%;
+        margin: 40px 0px;
+    }
+    .percentages{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        width: 100%;
+        margin: 16px 0px;
+        gap: 14px;
+    }
+    #tip10, #tip15, #tip25, #tip5, #tip50, #custom-amount{
+        width: 117px;
+        padding: 6px 14px;
+    }
+    .people-box{
+        width: 100%;
+        margin: 46px 0px;
+    }
+    .total-box{
+        width: 49%;
+        margin: 32px 0px;
+    }
+    .tip-amount-person{
+        padding-top: 46px;
+        width: 80%;
+        gap: 92px;
+        text-align: right;
+    }
+    .second-text{
+        text-align: left;
+    }
+    .price{
+        width: 44%;
+        text-align: right;
+    }
+    #price-number, #total-price{
+        font-size: 48px;
+        width: 100%;
+    }
+    .total-person{
+        padding-top: 53px;
+        width: 80%;
+    }
+    .button{
+        width: 80%;
+        margin-top: 122px;
+    }
+}
+
+@media (min-width: 1920px){
+    .logo{
+        width: 100%;
+    }
+    .main-container{
+        width: 75%;
+    }
+    .container{
+        width: 90%;
+        justify-content: space-between;
+    }
+    .second-container{
+        width: 40%;
+    }
+    .bill-container{
+        padding-top: 70px;
+    }
+    .bill, .tip, .people-amount{
+        font-size: 25px;
+    }
+    .total-box{
+        width: 45%;
+        margin: 70px 0px 0px;
+    }
+    .first-text{
+        font-size: 20px;
+    }
+    .second-text{
+        font-size: 16px;
+    }
+    #reset-button{
+        font-size: 30px;
+    }
+}
