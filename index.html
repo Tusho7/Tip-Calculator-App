@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
+        <link rel="stylesheet" href="style.css"/>
+        <title>Tip Calculator</title>
+    </head>
+    <body>
+
+        <div class="header-title">
+            <header class="header">
+                <img class="logo" src="./images/logo.svg" alt="logo"/>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="container">
+            <div class="second-container">
+                <div class="bill-container">
+                    <div class="first-error-message">
+                    <label class="bill" for="bill-amount">Bill</label>
+                    <label for="bill-amount" class="bill-error">Can't Be Zero</label>
+                    <label for="bill-amount" class="too-much">Too Much</label>
+                    </div>
+                    
+                    <input type="number" class="bill-input" id="bill-amount" placeholder="0" />
+                </div>
+
+                <div class="select-tip-box">
+                    <h2 class="tip">Select Tip %</h2>
+                    <div class="percentages">
+                        <button class="tips" id="tip5">5%</button>
+                        <button class="tips" id="tip10">10%</button>
+                        <button class="tips" id="tip15">15%</button>
+                        <button class="tips" id="tip25">25%</button>
+                        <button class="tips" id="tip50">50%</button>
+                        <input
+                            type="number"
+                            id="custom-amount"
+                            placeholder="Custom"
+                            name="custon-amount"
+                            min="0"
+                            max="100"/>
+                    </div>
+                </div>
+
+                <div class="people-box">
+                    <div class="second-error-message">
+                    <label for="people-amount" class="people-amount">Number of People</label>
+                    <label for="" class="error">Can't Be Zero</label>
+                    </div>
+                    <input type="number" id="people-amount" placeholder="0"/>
+                </div>
+            </div>
+
+            
+
+            <div class="total-box">
+                <div class="tip-amount-person">
+                    <div class="text">
+                        <p class="first-text">Tip Amount</p>
+                        <p class="second-text">/ person</p>
+                    </div>
+
+                    <div class="price">
+                        <span id="price-number">$0.00</span>
+                    </div>
+                </div>
+
+                <div class="total-person">
+                    <div class="total">
+                        <div class="text">
+                            <p class="first-text">Total</p>
+                            <p class="second-text">/ person</p>
+                        </div>
+                    </div>
+
+                    <div class="price">
+                        <span id="total-price">$0.00</span>
+                    </div>
+                </div>
+
+                <div class="button">
+                    <button id="reset-button">Reset</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+    <script src="script.js"></script>
+</html>
